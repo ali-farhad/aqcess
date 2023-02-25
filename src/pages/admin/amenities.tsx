@@ -59,7 +59,7 @@ import {
           <Card minW={{base: "100%", md:"40rem"}}>
             <CardHeader>
             <HStack mb="1rem">
-            <Link as={NextLink} href="/users/home" _hover={{outline: "none"}}>
+            <Link as={NextLink} href="/admin/home" _hover={{outline: "none"}}>
             <Button leftIcon={<HiChevronDoubleLeft fontSize="1.5rem"  />} variant='outline'>Volver</Button>
             </Link>
             </HStack>
@@ -137,7 +137,7 @@ import {
                         </VStack>
                         <Box>
                     <Flex mt="5">
-                      <Link width="100%" _hover={{outline: "none"}} as={NextLink} href="/users/home">
+                      <Link width="100%" _hover={{outline: "none"}} as={NextLink} href="/admin/home">
                       <Button
                         width="100%"
                         colorScheme="brandBtn"
@@ -160,7 +160,7 @@ import {
                   </FormControl>
 
                   <Flex mt="5">
-                      <Link width="100%" _hover={{outline: "none"}} as={NextLink} href="/users/home">
+                      <Link width="100%" _hover={{outline: "none"}} as={NextLink} href="/admin/home">
                       <Button
                         width="100%"
                         colorScheme="brandBtn"

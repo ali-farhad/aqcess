@@ -56,13 +56,13 @@ import { HiChevronDoubleLeft} from "react-icons/hi";
           <Card width={{base: "100%", md: "40rem"}}>
             <CardHeader>
             <HStack mb="1rem">
-            <Link as={NextLink} href="/users/home" _hover={{outline: "none"}}>
+            <Link as={NextLink} href="/user/home" _hover={{outline: "none"}}>
             <Button leftIcon={<HiChevronDoubleLeft fontSize="1.5rem"  />} variant='outline'>Volver</Button>
             </Link>
             </HStack>
               <VStack spacing="1">
                 <Text fontSize={{ base: "lg", lg: "2xl" }} fontWeight="medium">
-                Historial de Accesos
+                Historial de acceso
                 </Text>
               </VStack>
             </CardHeader>
@@ -73,7 +73,7 @@ import { HiChevronDoubleLeft} from "react-icons/hi";
       <Tr>
         <Th>Visitante</Th>
         <Th>Fecha/Hora</Th>
-        <Th>Residente</Th>
+        
       </Tr>
     </Thead>
     <Tbody>
@@ -82,7 +82,6 @@ import { HiChevronDoubleLeft} from "react-icons/hi";
              <Tr key={row.id}>
             <Td>{row.name}</Td>
             <Td>{row.time}</Td>
-            <Td>{row.id}</Td>
             </Tr>
         ))}
       

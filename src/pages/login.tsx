@@ -58,7 +58,7 @@ const Login: React.FC<LoginProps> = () => {
 
               <FormControl>
               <Flex justify={{base: "center", md: "start"}} my="5">
-              <Link as={NextLink} href="/users/home" _hover={{outline: "none"}}>
+              <Link as={NextLink} href="/admin/home" _hover={{outline: "none"}}>
               <Button minWidth={{base: "100%", md: "auto"}} colorScheme="brandBtn">
               Inicia Sesión
               </Button>

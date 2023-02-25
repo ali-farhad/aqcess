@@ -31,31 +31,28 @@ import Seo from "@/pages/components/Header/Seo";
 import { HiChevronDoubleLeft} from "react-icons/hi";
 
   
-  type PersonProps = {};
+  type visitorProps = {};
   
-  const Person: React.FC<PersonProps> = () => {
+  const visitor: React.FC<visitorProps> = () => {
     
   
     
   
     return (
       <>
-        <Seo pageTitle="Aqcess - Resident Person" />
+        <Seo pageTitle="Aqcess - register the visitor" />
   
         <Navbar user={true} />
         <Container my={{ base: "12" }}>
           <Card>
             <CardHeader>
-            <HStack mb="1rem">
-            <Link as={NextLink} href="/users/residents" _hover={{outline: "none"}}>
-            <Button leftIcon={<HiChevronDoubleLeft fontSize="1.5rem"  />} variant='outline'>Volver</Button>
-            </Link>
-            </HStack>
               <VStack spacing="1">
                 <Text fontSize={{ base: "lg", lg: "2xl" }} fontWeight="medium">
-                Información del residente
+                Registra un visitante
                 </Text>
-                
+                <Text align="center" maxWidth="xs" fontSize="sm" color="gray.500">
+                Solicita la información a la persona que desea acceder
+                </Text>
               </VStack>
             </CardHeader>
             <CardBody>
@@ -65,49 +62,36 @@ import { HiChevronDoubleLeft} from "react-icons/hi";
                     <FormLabel>Nombre Completo</FormLabel>
                     <Input
                       type="text"
-                      placeholder="Escribe el nombre de tu visitante"
-                      value="John Doe Sharma"
+                      placeholder="Escribe el nombre del visitante"
                     />
                   </FormControl>
 
                   <FormControl>
-                    <FormLabel>Email</FormLabel>
-                    <Input type="email" value="jds@aqcess.com" />
+                  <FormLabel>Persona que visita</FormLabel>
+                    <Select color="gray.500" placeholder='Selecciona un residente'>
+                        <option value='option1'>Name 1</option>
+                        <option value='option2'>Name 2</option>
+                        <option value='option3'>Name 3</option>
+                    </Select>
                   </FormControl>
 
                   <FormControl>
-                    <FormLabel>Address</FormLabel>
-                    <Input type="text" value="Av Principal #17" />
+                    <FormLabel>Razón de la visita</FormLabel>
+                    <Input
+                      type="text"
+                      placeholder="Escribe la razón de la visita"
+                    />
                   </FormControl>
-
-                  <FormControl>
-                    <FormLabel>Teléfono</FormLabel>
-                    <Input type="phone" value="+52-442668-7402" />
-                  </FormControl>
-
-                  <FormControl>
-                    <FormLabel>Rol</FormLabel>
-                    <Input type="text" value="Residente" />
-                  </FormControl>
-  
-                 <FormControl>
-                    <FormLabel>ID</FormLabel>
-                    <Input type="text" value="124" />
-                  </FormControl>
-  
-  
-                 
-
-                 
   
                   <FormControl>
-                    <Flex justify={{ base: "center", md: "start" }} mt="5">
-                      <Link width="100%" _hover={{outline: "none"}} as={NextLink} href="/users/home">
+                    <Flex justify={{ base: "center", md: "start" }} my="5">
+                      <Link width="100%" _hover={{outline: "none"}} as={NextLink} href="/controller/home">
                       <Button
-                        width="100%"
+                        minWidth="100%"
+                        mt="5"
                         colorScheme="brandBtn"
                       >
-                        Guardar Cambios
+                        Guardar Registro
                       </Button>
                       </Link>
                     </Flex>
@@ -120,5 +104,5 @@ import { HiChevronDoubleLeft} from "react-icons/hi";
       </>
     );
   };
-  export default Person;
+  export default visitor;
   

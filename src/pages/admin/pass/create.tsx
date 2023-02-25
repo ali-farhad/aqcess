@@ -47,7 +47,7 @@ import { HiChevronDoubleLeft} from "react-icons/hi";
           <Card>
             <CardHeader>
             <HStack mb="1rem">
-            <Link as={NextLink} href="/users/home" _hover={{outline: "none"}}>
+            <Link as={NextLink} href="/admin/home" _hover={{outline: "none"}}>
             <Button leftIcon={<HiChevronDoubleLeft fontSize="1.5rem"  />} variant='outline'>Volver</Button>
             </Link>
             </HStack>
@@ -121,7 +121,7 @@ import { HiChevronDoubleLeft} from "react-icons/hi";
   
                   <FormControl>
                     <Flex justify={{ base: "center", md: "start" }} my="5">
-                      <Link _hover={{outline: "none"}} as={NextLink} href="/users/pass">
+                      <Link _hover={{outline: "none"}} as={NextLink} href="/admin/pass">
                       <Button
                         minWidth={{ base: "100%", md: "auto" }}
                         colorScheme="brandBtn"

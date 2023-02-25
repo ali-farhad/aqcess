@@ -24,7 +24,7 @@ import NextLink from 'next/link'
 
 
 type NavbarProps = {
-    user: boolean
+    user?: boolean
 };
 
 const Navbar:React.FC<NavbarProps> = ({user} : NavbarProps) => {
@@ -92,7 +92,7 @@ const Navbar:React.FC<NavbarProps> = ({user} : NavbarProps) => {
 
                     {user && (
                       <Box>
-                            <Link as={NextLink} href="/users/profile" _hover={{outline: "none"}}>
+                            <Link as={NextLink} href="/admin/profile" _hover={{outline: "none"}}>
                             <Avatar bg="brandBtn.500" color="white" cursor="pointer"  name='Ali Farhad' src='#' />
                             </Link>
 

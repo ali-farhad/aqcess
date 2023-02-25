@@ -42,28 +42,32 @@ const Pass: React.FC<PassProps> = () => {
         <Card bg="blue.500" color="white">
           <CardHeader>
           <HStack mb="1rem">
-            <Link as={NextLink} href="/users/home" _hover={{outline: "none"}}>
+            <Link as={NextLink} href="/admin/home" _hover={{outline: "none"}}>
             <Button _hover={{color: "black"}} leftIcon={<HiChevronDoubleLeft fontSize="1.5rem"  />} variant='outline'>Volver</Button>
             </Link>
             </HStack>
             <Card mt="4" maxW="80%" align="center" mx="auto">
               <CardBody>
-                <Box mb="2" align="center">
+                <Stack align="center">
+                <Box mb="2">
                   <Image
                     src="/logo_with_name.svg"
                     width={100}
                     height={100}
                     alt="site logo"
+                    
                   />
                 </Box>
-                <Box align="center">
+                <Box>
                   <Image
                     src="/qrcode.svg"
                     width={150}
                     height={150}
                     alt="qrcode"
+            
                   />
                 </Box>
+                </Stack>
                 <Stack spacing="2" align="start">
                   <Box>
                     <Text fontSize="sm" color="blue.600">
