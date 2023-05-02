@@ -46,10 +46,10 @@ const Checkout: React.FC<CheckoutProps> = () => {
           <CardHeader>
             <VStack spacing="1">
               <Text fontSize={{ base: "lg", lg: "2xl" }} fontWeight="medium">
-                Detalles de pago
+              Verificar
               </Text>
               <Text align="center" maxWidth="xs" fontSize="sm" color="gray.500">
-                Cancela cuando quieras. Nuestros precios incluyen IVA.
+              Cancelar cuando sea
               </Text>
             </VStack>
           </CardHeader>
@@ -57,15 +57,15 @@ const Checkout: React.FC<CheckoutProps> = () => {
             <form>
               <Stack spacing="4">
                 <FormControl>
-                  <FormLabel>Nombre de la organización</FormLabel>
+                  <FormLabel>Nombre del apartamento o complejo de viviendas</FormLabel>
                   <Input
                     type="text"
-                    placeholder="Escribe el nombre de la organización"
+                    placeholder="Escriba el nombre complejo"
                   />
                 </FormControl>
 
                 <FormControl>
-                  <FormLabel>Añade el logo de tu organización</FormLabel>
+                  <FormLabel>Agregar un logotipo</FormLabel>
                   <VStack
                     py="3"
                     border="dashed"
@@ -102,14 +102,14 @@ const Checkout: React.FC<CheckoutProps> = () => {
                 </FormControl>
 
                 <FormControl>
-                  <FormLabel>Nombre que aparece en la tarjeta</FormLabel>
-                  <Input type="text" placeholder="Escribe el nombre" />
+                  <FormLabel>Nombre del tarjetahabiente</FormLabel>
+                  <Input type="text" placeholder="Escriba el nombre del titular de la tarjeta" />
                 </FormControl>
 
                 <FormControl>
-                  <FormLabel>Número de tarjeta</FormLabel>
+                  <FormLabel>Números en la tarjeta</FormLabel>
                   <InputGroup>
-                    <Input placeholder="Ingresa el número de tu tarjeta" />
+                    <Input placeholder="XXXX XXXX XXXX 7890" />
                     <InputRightElement
                       color="brandBtn.600"
                       mx="10px"
@@ -133,12 +133,14 @@ const Checkout: React.FC<CheckoutProps> = () => {
 
                 <FormControl>
                   <Flex justify={{ base: "center", md: "start" }} my="5">
+                  <Link as={NextLink} href="/admin/home">
                     <Button
                       minWidth={{ base: "100%", md: "auto" }}
                       colorScheme="brandBtn"
                     >
-                      Contratar $3,500 por mes
+                      Paga 2500mxn
                     </Button>
+                    </Link>
                   </Flex>
                 </FormControl>
               </Stack>

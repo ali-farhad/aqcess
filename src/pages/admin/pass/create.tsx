@@ -29,6 +29,7 @@ import {
 import Seo from "@/pages/components/Header/Seo";
 
 import { HiChevronDoubleLeft} from "react-icons/hi";
+import {FcContacts} from "react-icons/fc";
 
   
   type CreateProps = {};
@@ -61,7 +62,17 @@ import { HiChevronDoubleLeft} from "react-icons/hi";
               </VStack>
             </CardHeader>
             <CardBody>
-                <HStack mb="2rem">
+
+            <FormControl>
+  <FormLabel>Seleccionar de Mis contactos</FormLabel>
+  <Select  icon={<FcContacts />} bg="blue" color="white" placeholder='Seleccione Contactos'>
+    <option style={{ color: 'black' }}>Contact 1</option>
+    <option style={{ color: 'black' }}>Contact 2</option>
+  </Select>
+</FormControl>
+
+
+                <HStack my="1rem">
                 <Divider orientation='horizontal'/>
                 <Text align="center" minW="13rem">Información de la visita</Text>
                 <Divider orientation='horizontal' />
@@ -77,26 +88,23 @@ import { HiChevronDoubleLeft} from "react-icons/hi";
                   </FormControl>
 
                   <FormControl>
-                    <FormLabel>Email</FormLabel>
-                    <Input type="email" placeholder="Escribe el Email de tu visitante" />
+                  <Checkbox value="" size="lg" colorScheme="blue">
+                            <Text fontSize="sm">Guardar contacto</Text>
+                          </Checkbox>
+                  </FormControl>
+
+                  <FormControl>
+                    <FormLabel>Razón de la visita</FormLabel>
+                    <Input type="text" placeholder="Ejemplo: visita familiar" />
+                  </FormControl>
+
+                  <FormControl>
+                  <Checkbox value="" size="lg" colorScheme="blue">
+                            <Text fontSize="sm">Es este un pase permanente?</Text>
+                          </Checkbox>
                   </FormControl>
   
-                  <FormControl>
-                    <Stack direction={{base:"column", md:"row"}} justify="space-between" spacing={8}>
-                      <Box>
-                      <Checkbox 
-                        defaultChecked
-                        size='lg' 
-                        >Añadir a contactos</Checkbox>
-                      </Box>
-                      <Box>
-                      <Checkbox 
-                        defaultChecked
-                        size='lg' 
-                        >Pase permanente</Checkbox>
-                      </Box>
-                    </Stack>
-                  </FormControl>
+                  
 
                   <FormControl>
                     <Stack direction={{base:"column", md:"row"}} my="3" justify="space-between" spacing={8}>

@@ -38,15 +38,12 @@ import {
                   Bienvenido a Aqcess
                 </Text>
                 <Text align="center" maxWidth="xs" fontSize="sm" color="gray.500">
-                Inicia sesión para comenzar a escanear pases de acceso.
+                crea una cuenta y registra tu apartamento o conjunto habitacional
                 </Text>
               </VStack>
             </CardHeader>
             <CardBody>
-                <Box mb="10">
-                  <FormLabel>Empresa</FormLabel>
-                   <Text width="100%" border="solid" p="2" bg="brandBtn.500" color="white">Central Estate</Text>
-                </Box>
+              
               <form>
               <Stack spacing="2">
                
@@ -62,7 +59,7 @@ import {
   
                 <FormControl>
                 <Flex justify={{base: "center", md: "start"}} my="5">
-                <Link as={NextLink} href="/admin/home" _hover={{outline: "none"}}>
+                <Link as={NextLink} href="/controller/home" _hover={{outline: "none"}}>
                 <Button minWidth={{base: "100%", md: "auto"}} colorScheme="brandBtn">
                 Inicia Sesión
                 </Button>

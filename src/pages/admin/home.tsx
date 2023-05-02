@@ -92,10 +92,10 @@ import {
     {
         id: 3,
         Hicon: "/icons/contact.svg",
-        url: "/admin/residents",
+        url: "/admin/contacts",
         alt: "contact logo",
-        btnTxt: "Añadir Residentes",
-        bodyTxt: "Aquí puedes invitar a  los residentes para que formen parte de tu organización.",
+        btnTxt: "Contactos",
+        bodyTxt: "Aquí puedes encontrar tus contactos.",
     },
     {
         id: 4,
@@ -114,7 +114,23 @@ import {
         bodyTxt: "Aquí puedes ver gestionar alos usuarios de vigialancia yresidentes.",
     },
     {
-        id: 6,
+      id: 6,
+      Hicon: "/icons/amenties.svg",
+      url: "/admin/manage/amenities",
+      alt: "amenity logo",
+      btnTxt: "Administrar",
+      bodyTxt: "Aquí puede crear, administrar y eliminar servicios",
+  },
+    {
+      id: 7,
+      Hicon: "/icons/pass.svg",
+      url: "/admin/pass",
+      alt: "pass logo",
+      btnTxt: "Pase de escaneo",
+      bodyTxt: "Aquí puede escanear un pase para proporcionar acceso a un visitante",
+  },
+    {
+        id: 8,
         Hicon: "/icons/logout.svg",
         url: "/admin/pass/create",
         alt: "logout logo",

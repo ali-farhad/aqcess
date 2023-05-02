@@ -66,6 +66,8 @@ import {
                  <Flex justify="center" transform="translateY(-57px)">
                  <Image src="/pass_fail.svg" width={70} height={70} alt="Fail pass"/>
                  </Flex>
+                 <Text align="center" transform="translateY(-50px)" fontSize="2xl">El visitante no tiene acceso</Text>
+
                 <Stack spacing="4" align="start">
                     <Box>
                       <Text fontSize="sm">

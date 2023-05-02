@@ -20,6 +20,7 @@ import {
   import React from "react";
   import NextLink from 'next/link'
   import Navbar from "../components/Header/Navbar";
+import Seo from "../components/Header/Seo";
   
   
   type LoginProps = {};
@@ -27,6 +28,9 @@ import {
   const Login: React.FC<LoginProps> = () => {
     return (
       <>
+
+        <Seo pageTitle="Aqcess - Login" />
+
         <Navbar user={false}/>
         <Container my={{ base: "12"}}>
           <Card>
@@ -34,10 +38,10 @@ import {
               <VStack spacing="1">
                 <Image src="/logo.png" width={50} height={50} alt="site logo" />
                 <Text pt="1rem" fontSize={{base: "lg", lg:"2xl"}} fontWeight="medium">
-                Aqcess te da la bienvenida
+                Bienvenido a Aqcess
                 </Text>
                 <Text align="center" maxWidth="xs" fontSize="sm" color="gray.500">
-                Inicia sesión para comenzar a utilizar el sistema
+                crea una cuenta y registra tu apartamento o conjunto habitacional
                 </Text>
               </VStack>
             </CardHeader>
@@ -46,9 +50,15 @@ import {
   
               <Stack spacing="2">
                
-                <FormControl>
-                  <FormLabel>Email</FormLabel>
-                  <Input type="email" placeholder="Escribe tu Email" />
+              <Select placeholder='seleccione su vivienda/complejo de apartamentos'>
+                <option value='option1'>Royal Estate Apartements</option>
+                <option value='option2'>Option 2</option>
+                <option value='option3'>Option 3</option>
+              </Select>
+
+              <FormControl>
+                  <FormLabel>Correo electrónico</FormLabel>
+                  <Input type="email" placeholder="escriba su correo electrónico" />
                 </FormControl>
   
                 <FormControl>
@@ -58,9 +68,9 @@ import {
   
                 <FormControl>
                 <Flex justify={{base: "center", md: "start"}} my="5">
-                <Link as={NextLink} href="/admin/home" _hover={{outline: "none"}}>
+                <Link as={NextLink} href="/user/home" _hover={{outline: "none"}}>
                 <Button minWidth={{base: "100%", md: "auto"}} colorScheme="brandBtn">
-                Inicia Sesión
+                Acceso
                 </Button>
                 </Link>
                 </Flex>

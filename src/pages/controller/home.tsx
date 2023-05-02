@@ -74,7 +74,7 @@ import {
   const tilesData = [
     {
         id: 1,
-        Hicon: "/icons/scanqr.svg",
+        Hicon: "/icons/pass.svg",
         url: "/controller/pass/success",
         alt: "pass logo",
         btnTxt: "Escanear Pase",
@@ -82,14 +82,7 @@ import {
     },
 
    
-    {
-        id: 2,
-        Hicon: "/icons/contact_controller.svg",
-        url: "/controller/visitor",
-        alt: "contact logo",
-        btnTxt: "Registrar Visitante",
-        bodyTxt: "Toca aquí para registrar a alguien que no tiene pase",
-    },
+   
     {
         id: 3,
         Hicon: "/icons/history.svg",

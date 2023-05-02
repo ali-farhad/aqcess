@@ -91,12 +91,19 @@ const Navbar:React.FC<NavbarProps> = ({user} : NavbarProps) => {
                     )}
 
                     {user && (
-                      <Box>
+                      <HStack>
+                         <Link as={NextLink} href="/admin/approve" _hover={{outline: "none"}}>
+                            <Avatar bg="red" color="white" cursor="pointer"  name='5' src='#' />
+                            </Link>
+
                             <Link as={NextLink} href="/admin/profile" _hover={{outline: "none"}}>
                             <Avatar bg="brandBtn.500" color="white" cursor="pointer"  name='Ali Farhad' src='#' />
                             </Link>
 
-                      </Box>
+                           
+
+
+                      </HStack>
                     )}
                    
                   </Flex>

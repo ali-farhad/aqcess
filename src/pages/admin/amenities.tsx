@@ -29,9 +29,11 @@ import {
     Thead,
     Tr,
     Tbody,
-    Td
+    Td,
+    Image,
+    TableCaption,
+    Spacer
   } from "@chakra-ui/react";
-  import Image from "next/image";
   import { useRef, useState } from "react";
   import NextLink from "next/link";
   import Navbar from "../components/Header/Navbar";
@@ -65,107 +67,82 @@ import {
             </HStack>
               <VStack spacing="1">
                 <Text fontSize={{ base: "lg", lg: "2xl" }} fontWeight="medium">
-                Areas Comunes
+                Reservar Comodidad
                 </Text>
               </VStack>
             </CardHeader>
             <CardBody>
             <Tabs>
                 <TabList>
-                    <Tab flex="1">Reservas Activas</Tab>
-                    <Tab flex="1">Gestionar Areas Comunes</Tab>
+                    <Tab flex="1">Nueva reserva</Tab>
+                    <Tab flex="1">Mis reservas</Tab>
                 </TabList>
 
                 <TabPanels>
+                    <TabPanel>
+                <VStack align="start" spacing="5">
+                 <Text>
+                  Select the aminty you wish to book
+                  </Text>
+                  <Box w="100%" h="200px" maxH="50%">
+                      <Text mb="1" fontWeight="bold">Pool Zone</Text>
+                      <Image w="100%" h="100%" objectFit="cover" src="/pool.png" borderRadius="lg"/>
+                  </Box>
+                  <Spacer/>
+                  <FormControl my="2" display="block">
+                  <Stack direction="row" justifyContent="space-between">
+                    <Box>
+                      <FormLabel>Tiempo de reserva</FormLabel>
+                      <Input type="time"/>
+                    </Box>
+                    <Box>
+                      <FormLabel>Fecha para registrarse</FormLabel>
+                      <Input type="date" />
+                    </Box>
+                  </Stack>
+                </FormControl>
+                <Flex justify={{ base: "center", md: "center" }} mt="1">
+                  <Link as={NextLink} href="/admin/home">
+                    <Button
+                      minWidth={{ base: "100%", md: "auto" }}
+                      colorScheme="brandBtn"
+                    >
+                      Reservar ahora
+                    </Button>
+                    </Link>
+                  </Flex>
+                  </VStack>
+                </TabPanel>
                     <TabPanel>
                     <TableContainer>
   <Table variant='simple'>
     <Thead>
       <Tr>
-        <Th>Residente</Th>
-        <Th>Fecha/Hora</Th>
-        <Th>Area</Th>
+        <Th>Nombre del servicio</Th>
+        <Th>Hora y fecha</Th>
       </Tr>
     </Thead>
     <Tbody>
-       
-        {data.map((row) => (
-             <Tr key={row.name}>
-            <Td>{row.name}</Td>
-            <Td>{row.time}</Td>
-            <Td>{row.area}</Td>
-            </Tr>
+    {data.map(row => (
+      <Tr key={row.name}>
+     
+          
+          <Td>{row.area}</Td>
+          <Td>{row.time}</Td>
+          </Tr>
         ))}
-      
-        
-
      
-     
-     
-    </Tbody>
-    
-  </Table>
-</TableContainer>
-                </TabPanel>
-                    <TabPanel>
-                    <Card maxW="md" mx="auto">
-                    <CardBody>
-                        <Box my="2" bg="gray.500">
-                            <Text p="1.5" align="center" color="white">Alberca #1</Text>
-                        </Box>
-                        <Text my="2">Disponibilidad</Text>
-                        <VStack spacing="4">
-                          
-                                
-                            {["Lunas", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"].map(
-                        (item) => (
-                            <HStack key={item} width="100%" spacing="2">
-                            <Box p="1" flex="1" border="solid" borderColor="gray.300" borderWidth="thin">
-                            <Text >{item}</Text>
-                            </Box>
-                            <Box p="1" flex="1" border="solid" borderColor="gray.300" borderWidth="thin">
-                                <input  type="time"/>
-                                </Box>
-                                <Box p="1" flex="1" border="solid" borderColor="gray.300" borderWidth="thin">
-                                <input type="time"/>
-                                </Box>
-                                </HStack> 
-                           
-                        )
-                      )}
-                                
-                        </VStack>
-                        <Box>
-                    <Flex mt="5">
-                      <Link width="100%" _hover={{outline: "none"}} as={NextLink} href="/admin/home">
-                      <Button
-                        width="100%"
-                        colorScheme="brandBtn"
-                      >
-                        Guardar Cambios
-                      </Button>
-                      </Link>
-                    </Flex>
-                  </Box>
-                    </CardBody>
-                    </Card>
-                    
+      </Tbody>
+      </Table>
+      </TableContainer>
                     <form>
-                    <FormControl my="4">
-                    <FormLabel>Crear nueva Área</FormLabel>
-                    <Input
-                      type="text"
-                      placeholder="Escribe el nombre de la amenidad"
-                    />
-                  </FormControl>
-
-                  <Flex mt="5">
+                  <Flex mt="16">
                       <Link width="100%" _hover={{outline: "none"}} as={NextLink} href="/admin/home">
                       <Button
                         width="100%"
                         colorScheme="brandBtn"
                       >
-                        Guardar Amenidad
+                      Ir al Inicio
                       </Button>
                       </Link>
                     </Flex>
@@ -186,31 +163,31 @@ import {
 
   const data = [
     {
-        area: "Alberca 1",
+        area: "Pool Zone",
         name: "John Doe Sharma",
         time: "24/07/2023 | 10:54 Am",
         
     },
     {
-        area: "Cancha",
+        area: "Asadores",
         name: "Selena Alvarez",
         time: "24/07/2023 | 10:54 Am",
         
     },
     {
-        area: "Alberca 2",
+        area: "Pool 3",
         name: "John Doe Sharma",
         time: "24/07/2023 | 10:54 Am",
         
     },
     {
-        area: "Jacuzzi",
+        area: "Pool 4",
         name: "Pedri Nicola",
         time: "24/07/2023 | 10:54 Am",
         
     },
     {
-        area: "Alberca 1",
+        area: "Pool 5",
         name: "Juan Felix",
         time: "24/07/2023 | 10:54 Am",
         

@@ -75,7 +75,7 @@ import {
     {
         id: 1,
         Hicon: "/icons/pass.svg",
-        url: "/user/pass/create",
+        url: "/admin/pass/create",
         alt: "pass logo",
         btnTxt: "Crear Pase",
         bodyTxt: "Aquí puedes crear un pase para recibir a un visitante.",
@@ -85,26 +85,19 @@ import {
     {
         id: 2,
         Hicon: "/icons/contact.svg",
-        url: "/user/contacts",
+        url: "/admin/contacts",
         alt: "contact logo",
         btnTxt: "Contactos",
         bodyTxt: "Aquí encontrarás a tus contactos guardados.",
     },
-    {
-        id: 3,
-        Hicon: "/icons/history.svg",
-        url: "/user/pass/history",
-        alt: "history logo",
-        btnTxt: "Mi Historial",
-        bodyTxt: "Aquí encontrarás un listado de tus accesos recientes.",
-    },
+    
     {
         id: 4,
         Hicon: "/icons/amenties.svg",
-        url: "/user/reservations",
+        url: "/admin/amenities",
         alt: "amenity logo",
-        btnTxt: "Reservar",
-        bodyTxt: "Aquí encontrarás los accesos recientes y la información de los visitantes.",
+        btnTxt: "Comodidades",
+        bodyTxt: "Aquí puedes reservar y ver amenidades.",
     },
  
     {

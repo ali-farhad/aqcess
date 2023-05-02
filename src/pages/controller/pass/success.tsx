@@ -64,9 +64,16 @@ import {
             <CardBody p="0" mt="5">
             <Card borderTopLeftRadius="3xl" borderTopRightRadius="3xl" bg="brandBtn.500" color="white" mt="4"  align="center" mx="auto">
                 <CardBody>
+                  
                  <Flex justify="center" transform="translateY(-57px)">
                  <Image src="/pass_success.svg" width={70} height={70} alt="success pass"/>
                  </Flex>
+               
+                 <Text align="center" transform="translateY(-50px)" fontSize="2xl">Verificado</Text>
+                 <Text align="center" transform="translateY(-50px)" fontSize="2xl">El visitante puede acceder</Text>
+                  
+                
+                 
                 <Stack spacing="4" align="start">
                     <Box>
                       <Text fontSize="sm">
