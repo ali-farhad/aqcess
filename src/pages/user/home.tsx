@@ -41,21 +41,22 @@ import {
   
         <Navbar user={true} />
         <Container px={{base: "2rem", md: "0"}} maxW={{base: "100%", md:"80%"}} my={{ base: "12" }}>
-        <SimpleGrid minChildWidth='300px' spacing='40px'>
+        <SimpleGrid columns={{base: 2, md: 3}} spacing="15px">
          {tilesData.map((tile) => (
             <Card  key={tile.id} _hover={{bg:"brandBtn.500", color: "white"}}>
             <CardHeader>
+              <Flex justify="end">
+            <HiChevronDoubleRight fontSize="1.5rem"/>
+            </Flex>
               <Image src={tile.Hicon} width={50} height={50} alt={tile.alt} />
             </CardHeader>
             <CardBody>
             <Link as={NextLink} href={tile.url}>
-             <Button _hover={{color: "white"}} fontWeight="medium" fontSize="2xl" variant="link" color="black">{tile.btnTxt}</Button>
+             <Button _hover={{color: "white"}} fontWeight="bold" fontSize={{base: "sm", md:"2xl"}} variant="link" color="black">{tile.btnTxt}</Button>
              </Link>
-             <Text mt="8" maxWidth="15rem">{tile.bodyTxt}</Text>
+             <Text fontSize={{base: "sm", md:"lg"}} mt={{base: "1rem", md: "8"}} maxWidth={{base: '100%', md:"15rem"}}>{tile.bodyTxt}</Text>
             </CardBody>
-            <CardFooter justify="end">
-                <HiChevronDoubleRight fontSize="1.5rem"/>
-            </CardFooter>
+          
           </Card>
          ))}
          

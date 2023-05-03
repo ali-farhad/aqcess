@@ -67,7 +67,7 @@ import {
             </HStack>
               <VStack spacing="1">
                 <Text fontSize={{ base: "lg", lg: "2xl" }} fontWeight="medium">
-                Reservar Comodidad
+                Reservar Amenidad
                 </Text>
               </VStack>
             </CardHeader>
@@ -82,7 +82,7 @@ import {
                     <TabPanel>
                 <VStack align="start" spacing="5">
                  <Text>
-                  Select the aminty you wish to book
+                 Selecciona el área a reservar
                   </Text>
                   <Box w="100%" h="200px" maxH="50%">
                       <Text mb="1" fontWeight="bold">Pool Zone</Text>
@@ -92,11 +92,11 @@ import {
                   <FormControl my="2" display="block">
                   <Stack direction="row" justifyContent="space-between">
                     <Box>
-                      <FormLabel>Tiempo de reserva</FormLabel>
+                      <FormLabel>Horario</FormLabel>
                       <Input type="time"/>
                     </Box>
                     <Box>
-                      <FormLabel>Fecha para registrarse</FormLabel>
+                      <FormLabel>Fecha</FormLabel>
                       <Input type="date" />
                     </Box>
                   </Stack>

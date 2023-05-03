@@ -74,7 +74,7 @@ import Seo from './../../components/Header/Seo';
             <CardBody>
             <Tabs>
                 <TabList>
-                    <Tab flex="1">Comodidades</Tab>
+                    <Tab flex="1">Reservaciones</Tab>
                     <Tab flex="1">Administrar</Tab>
                 </TabList>
 
@@ -123,15 +123,15 @@ import Seo from './../../components/Header/Seo';
                     <form>
               <Stack spacing="4">
                 <FormControl>
-                  <FormLabel>Crear un nuevo servicio</FormLabel>
+                  <FormLabel>Crear una amenidad</FormLabel>
                   <Input
                     type="text"
-                    placeholder="Escriba el nombre del servicio"
+                    placeholder="Escribe el nombre"
                   />
                 </FormControl>
 
                 <FormControl>
-                  <FormLabel>Agregar un logotipo</FormLabel>
+                  <FormLabel>Añade una imagen</FormLabel>
                   <VStack
                     py="3"
                     border="dashed"

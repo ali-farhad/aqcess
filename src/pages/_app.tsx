@@ -1,9 +1,9 @@
 import type { AppProps } from 'next/app'
-import { Inter } from '@next/font/google'
+import { Nunito_Sans } from '@next/font/google'
 import { extendTheme } from "@chakra-ui/react"
 import { ChakraProvider } from '@chakra-ui/react'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Nunito_Sans({ subsets: ['latin'],weight: ['200', '300', '600', '700', '800', '900'] })
 
 const theme = extendTheme({
   colors: {

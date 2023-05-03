@@ -10,7 +10,9 @@ Text,
 Collapse,
 useDisclosure,
 Link,
-Avatar
+Avatar,
+Spacer,
+VisuallyHidden
 } from "@chakra-ui/react";
 
 
@@ -43,7 +45,15 @@ const Navbar:React.FC<NavbarProps> = ({user} : NavbarProps) => {
           <Box as="nav" bg="bg-surface" boxShadow="sm">
             <Container maxW="100%" py={{ base: "4", lg: "5" }}>
               <HStack spacing="10" justify="space-between">
-               
+                  {user && !isDesktop ? (
+                    
+                     <Link as={NextLink} href="/admin/approve" _hover={{outline: "none"}}>
+                     <Avatar bg="red" color="white" cursor="pointer"  name='5' src='#' />
+                     </Link>
+                  ) : (
+                    <p style={{visibility:"hidden"}}>asdfasdfasdf</p>
+
+                  )}
                   <Link href="/">
                   <HStack spacing="13px">
                   <Image
@@ -52,11 +62,12 @@ const Navbar:React.FC<NavbarProps> = ({user} : NavbarProps) => {
                     height={30}
                     alt="site logo"
                   />
-                  <Text fontSize="lg" fontWeight="semibold">
+                  <Text  fontSize="lg" fontWeight="semibold">
                     Aqcess
                   </Text>
                   </HStack>
                   </Link>
+                  
                 
                 {isDesktop ? (
                   <Flex justify="space-between" flex="1">
@@ -92,10 +103,12 @@ const Navbar:React.FC<NavbarProps> = ({user} : NavbarProps) => {
 
                     {user && (
                       <HStack>
-                         <Link as={NextLink} href="/admin/approve" _hover={{outline: "none"}}>
-                            <Avatar bg="red" color="white" cursor="pointer"  name='5' src='#' />
-                            </Link>
-
+                      {isDesktop && (
+                        <Link as={NextLink} href="/admin/approve" _hover={{outline: "none"}}>
+                     <Avatar bg="red" color="white" cursor="pointer"  name='5' src='#' />
+                     </Link>
+                      )}
+                        
                             <Link as={NextLink} href="/admin/profile" _hover={{outline: "none"}}>
                             <Avatar bg="brandBtn.500" color="white" cursor="pointer"  name='Ali Farhad' src='#' />
                             </Link>
